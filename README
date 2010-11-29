@@ -1,0 +1,24 @@
+Face Detection in 100% pure PHP
+
+This is a port of JViolaJones (http://code.google.com/p/jviolajones/) to PHP. The author did a great job writing understandable code. Both thumbs up!
+
+Viola Jones is an object detection method named after Paul Viola and Michael Jones. See their paper: http://research.microsoft.com/en-us/um/people/viola/Pubs/Detect/violaJones_CVPR2001.pdf
+
+Viola Jones is also the object detector from OpenCV (http://sourceforge.net/projects/opencvlibrary/). Technically a classifier (namely a cascade of boosted classifiers working with haar-like features) is trained with a few hundreds of sample views of a particular object (i.e., a face or a car), called positive examples, that are scaled to the same size (say, 20x20), and negative examples - arbitrary images of the same size.  
+
+PHP FaceDetector as well as JViolaJones can handle the classifiers shipped with OpenCV or trained with OpenCV. One classifier (haarcascade_frontalface_default.xml) is shipped with this software, so you don't need to download or install OpenCV, although it is a great tool too.
+
+Basic usage (for details see doc):
+<?php
+include("FaceDetector.php");
+$detector = new FaceDetector();
+$detector->scan("test.jpg");
+$faces = $detector->getFaces();
+foreach($faces as $face)
+{
+	echo "Face found at x: {$face['x']}, y: {$face['y']}, width: {$face['width']}, height: {$face['height']}<br />\n"; 
+}
+?>
+
+Felix Koch
+mail@felixkoch.de

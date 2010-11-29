@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class FaceDetector</title>
+			<link rel="stylesheet" href="stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+
+<h2 class="class-name">Class FaceDetector</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Face Detection in 100% pure PHP</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Felix Koch &lt;<a href="mailto:mail@felixkoch.de">mail@felixkoch.de</a>&gt;</li>
+				<li><span class="field">version:</span> <p>1.0</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-inc">include</span><span class="src-sym">(</span><span class="src-str">&quot;FaceDetector.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$detector&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../default/FaceDetector.html">FaceDetector</a></span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$detector</span><span class="src-sym">-&gt;</span><a href="../default/FaceDetector.html#methodscan">scan</a><span class="src-sym">(</span><span class="src-str">&quot;test.jpg&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$faces&nbsp;</span>=&nbsp;<span class="src-var">$detector</span><span class="src-sym">-&gt;</span><a href="../default/FaceDetector.html#methodgetFaces">getFaces</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$faces&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$face</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;</span><span class="src-str">Face&nbsp;found&nbsp;at&nbsp;x:&nbsp;{<span class="src-var">$face</span><span class="src-sym">[</span><span class="src-str">'x'</span><span class="src-sym">]</span><span class="src-sym">}</span>,&nbsp;y:&nbsp;{<span class="src-var">$face</span><span class="src-sym">[</span><span class="src-str">'y'</span><span class="src-sym">]</span><span class="src-sym">}</span>,&nbsp;width:&nbsp;{<span class="src-var">$face</span><span class="src-sym">[</span><span class="src-str">'width'</span><span class="src-sym">]</span><span class="src-sym">}</span>,&nbsp;height:&nbsp;{<span class="src-var">$face</span><span class="src-sym">[</span><span class="src-str">'height'</span><span class="src-sym">]</span><span class="src-sym">}</span>&lt;br&nbsp;/&gt;\n</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></div></p></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_FaceDetector.php.html">/FaceDetector.php</a> (line <span class="field">37</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																				
+												<div class="method-definition">
+											<span class="method-result"><a href="../default/FaceDetector.html">FaceDetector</a></span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$classifierFile</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getFaces" title="details" class="method-name">getFaces</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$moreConfidence</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool|resource</span>
+										<a href="#getImage" title="details" class="method-name">getImage</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$fileName</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$moreConfidence</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$showAllRects</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#scan" title="details" class="method-name">scan</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$imageFile</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">51</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/FaceDetector.html">FaceDetector</a></span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$classifierFile</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$classifierFile</span><span class="var-description">: Path to classifier file, otherwise default classifier will be used</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFaces" id="getFaces"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getFaces</span> (line <span class="line-number">191</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returnes array of found faces.</p>
+<p class="description"><p>Each face is represented by an associative array with the keys x, y, width and hight.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> found faces</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getFaces
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$moreConfidence</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$moreConfidence</span><span class="var-description">: desire more confidence what a face is, gives less results</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetImage" id="getImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getImage</span> (line <span class="line-number">205</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gives access to image with found faces marked</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> if filename given, image will be saved to disk, otherwise image ressource</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|resource</span>
+		<span class="method-name">
+			getImage
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$fileName</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$moreConfidence</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$showAllRects</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fileName</span><span class="var-description">: filename to save on disk</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$moreConfidence</span><span class="var-description">: desire more confidence what a face is, gives less results</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$showAllRects</span><span class="var-description">: mark all faces before merging, for debugging purposes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodscan" id="scan"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">scan</span> (line <span class="line-number">93</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Detect faces in given image</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			scan
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$imageFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$imageFile</span><span class="var-description">: path of image file</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 29 Nov 2010 20:59:49 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
